@@ -6,7 +6,7 @@
 /*   By: cadenegr <neo_dgri@hotmail.com>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/30 13:19:27 by cadenegr          #+#    #+#             */
-/*   Updated: 2024/05/31 17:24:49 by cadenegr         ###   ########.fr       */
+/*   Updated: 2025/09/30 15:13:19 by cadenegr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,6 +32,7 @@ typedef struct s_pipe
 int		correct_argument(int ac, char **env, t_p *p);
 void	init_struct(t_p *p);
 void	is_error(int error_type);
+void	display_enhanced_error(int error_type, const char *context);
 
 //exec_env_access.c
 void	execute(char *cmd, char **env, t_p *p);

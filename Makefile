@@ -6,7 +6,7 @@
 #    By: cadenegr <neo_dgri@hotmail.com>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/05/28 14:08:10 by cadenegr          #+#    #+#              #
-#    Updated: 2024/05/28 14:08:52 by cadenegr         ###   ########.fr        #
+#    Updated: 2025/09/30 15:18:18 by cadenegr         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -28,9 +28,14 @@ CFLAGS = -Wall -Wextra -Werror
 LDFLAGS = -L$(LIBFTDIR) -lft_printf
 RM = rm -rf
 
-.PHONY: all clean fclean re
+.PHONY: all clean fclean re test
 
 all: $(NAME)
+
+test: $(NAME)
+	@echo "🧪 Running Pipex Test Suite..."
+	@./test_pipex.sh
+
 $(NAME): $(LIBFT) $(OBJDIR) $(OBJ)
 	$(CC) $(CFLAGS) $(INCLUDES) -o $(NAME) $(OBJ) $(LDFLAGS)
 
